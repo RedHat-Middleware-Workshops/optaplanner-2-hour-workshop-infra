@@ -1,0 +1,45 @@
+apiVersion: org.eclipse.che/v1
+kind: CheCluster
+metadata:
+  finalizers:
+  - oauthclients.finalizers.che.eclipse.org
+  generation: 1
+  name: codeready-workspaces
+spec:
+  auth:
+    externalIdentityProvider: false
+    identityProviderAdminUserName: admin
+    identityProviderClientId: codeready-public
+    identityProviderPassword: AWSj1RYQEXJ7
+    identityProviderPostgresPassword: 2uBPHPsI5tCa
+    identityProviderRealm: codeready
+    identityProviderURL: http://keycloak-namespace-placeholder.apps-crc.testing
+    oAuthClientName: codeready-workspaces-openshift-identity-provider-7szjzy
+    oAuthSecret: UXgpCsai7kwq
+    openShiftoAuth: true
+    updateAdminPassword: false
+  database:
+    chePostgresDb: dbche
+    chePostgresHostName: postgres
+    chePostgresPassword: ARcs9bdOT3P6
+    chePostgresPort: "5432"
+    chePostgresUser: pgche
+    externalDb: false
+  k8s: {}
+  metrics:
+    enable: false
+  server:
+    allowUserDefinedWorkspaceNamespaces: false
+    cheDebug: "false"
+    cheFlavor: codeready
+    cheHost: codeready-namespace-placeholder.apps-crc.testing
+    cheLogLevel: INFO
+    externalDevfileRegistry: false
+    externalPluginRegistry: false
+    gitSelfSignedCert: false
+    selfSignedCert: false
+    tlsSupport: false
+  storage:
+    preCreateSubPaths: true
+    pvcClaimSize: 1Gi
+    pvcStrategy: per-workspace
