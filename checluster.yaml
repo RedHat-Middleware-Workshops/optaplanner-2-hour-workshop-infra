@@ -6,40 +6,29 @@ metadata:
   generation: 1
   name: codeready-workspaces
 spec:
-  auth:
-    externalIdentityProvider: false
-    identityProviderAdminUserName: admin
-    identityProviderClientId: codeready-public
-    identityProviderPassword: AWSj1RYQEXJ7
-    identityProviderPostgresPassword: 2uBPHPsI5tCa
-    identityProviderRealm: codeready
-    identityProviderURL: http://keycloak-namespace-placeholder.apps-crc.testing
-    oAuthClientName: codeready-workspaces-openshift-identity-provider-7szjzy
-    oAuthSecret: UXgpCsai7kwq
-    openShiftoAuth: true
-    updateAdminPassword: false
-  database:
-    chePostgresDb: dbche
-    chePostgresHostName: postgres
-    chePostgresPassword: ARcs9bdOT3P6
-    chePostgresPort: "5432"
-    chePostgresUser: pgche
-    externalDb: false
-  k8s: {}
-  metrics:
-    enable: false
   server:
-    allowUserDefinedWorkspaceNamespaces: false
-    cheDebug: "false"
+    cheImageTag: ''
     cheFlavor: codeready
-    cheHost: codeready-namespace-placeholder.apps-crc.testing
-    cheLogLevel: INFO
-    externalDevfileRegistry: false
-    externalPluginRegistry: false
-    gitSelfSignedCert: false
-    selfSignedCert: false
+    devfileRegistryImage: 'quay.io/ddoyle/che-devfile-registry:latest'
+    pluginRegistryImage: ''
     tlsSupport: false
+    selfSignedCert: false
+  database:
+    externalDb: false
+    chePostgresHostName: ''
+    chePostgresPort: ''
+    chePostgresUser: ''
+    chePostgresPassword: ''
+    chePostgresDb: ''
+  auth:
+    openShiftoAuth: true
+    identityProviderImage: ''
+    externalIdentityProvider: false
+    identityProviderURL: ''
+    identityProviderRealm: ''
+    identityProviderClientId: ''
   storage:
-    preCreateSubPaths: true
-    pvcClaimSize: 1Gi
     pvcStrategy: per-workspace
+    pvcClaimSize: 1Gi
+    preCreateSubPaths: true
+
