@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PROJECT_NAME="optaplanner-workshop-2"
+PROJECT_NAME="optaplanner-workshop"
 
 echo "Creating project: $PROJECT_NAME"
 oc new-project $PROJECT_NAME --display-name="OptaPlanner Workshop" --description="OptaPlanner Workshop"

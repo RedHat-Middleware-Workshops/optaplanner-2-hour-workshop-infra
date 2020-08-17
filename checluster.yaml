@@ -1,10 +1,8 @@
 apiVersion: org.eclipse.che/v1
 kind: CheCluster
 metadata:
-  finalizers:
-  - oauthclients.finalizers.che.eclipse.org
-  generation: 1
   name: codeready-workspaces
+  namespace: namespace-placeholder
 spec:
   server:
     cheImageTag: ''
@@ -31,4 +29,3 @@ spec:
     pvcStrategy: per-workspace
     pvcClaimSize: 1Gi
     preCreateSubPaths: true
-
