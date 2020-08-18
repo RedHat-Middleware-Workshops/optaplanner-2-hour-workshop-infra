@@ -9,7 +9,7 @@ spec:
     cheFlavor: codeready
     devfileRegistryImage: 'quay.io/ddoyle/che-devfile-registry:latest'
     pluginRegistryImage: ''
-    tlsSupport: false
+    tlsSupport: true
     selfSignedCert: false
   database:
     externalDb: false
